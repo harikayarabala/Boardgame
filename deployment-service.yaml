@@ -31,7 +31,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: boardgame-svc
+  name: boardgame-ssvc
   labels:
     app: boardgame
 spec:
@@ -40,6 +40,5 @@ spec:
   type: NodePort
   ports:
     - protocol: TCP
-      port: 8080          # service port (inside cluster)
-      targetPort: 8080    # container port
-      nodePort: 30080     # 👈 external access port
+      port: 8080
+      targetPort: 8080
